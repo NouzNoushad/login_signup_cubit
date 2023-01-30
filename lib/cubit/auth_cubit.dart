@@ -70,6 +70,7 @@ class AuthCubit extends Cubit<AuthState> {
         email,
         password,
       ]).then((value) {
+        getUsersData(database!);
         print('User data added to database');
         emit(AuthDatabaseInsertState());
       }).catchError((err) {
@@ -101,6 +102,8 @@ class AuthCubit extends Cubit<AuthState> {
     print(email);
     List<String> emails = [];
     List<String> passwords = [];
+    var user = users!.where((user) => user['email'] == email);
+    print(user);
     for (var user in users!) {
       emails.add(user['email']);
       passwords.add(user['password']);

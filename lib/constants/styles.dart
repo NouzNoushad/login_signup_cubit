@@ -27,3 +27,13 @@ SizedBox kSizedBoxHeight10 = const SizedBox(
 SizedBox kSizedBoxHeight25 = const SizedBox(
   height: 25,
 );
+
+SizedBox kSizedBoxWidth15 = const SizedBox(
+  width: 15,
+);
+
+EdgeInsets kPaddingAll10 = const EdgeInsets.all(10);
+
+EdgeInsets kPaddingHorizontal10 = const EdgeInsets.symmetric(horizontal: 10);
+
+EdgeInsets kPaddingVertical10 = const EdgeInsets.symmetric(vertical: 10);
